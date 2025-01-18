@@ -17,7 +17,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '33 0 * * 6'
+    - cron: '45 4 * * 6'
 
 jobs:
   analyze:
@@ -79,7 +79,9 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-          gcc p1.c
+        gcc p1.c;
+        gcc test1.c
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
