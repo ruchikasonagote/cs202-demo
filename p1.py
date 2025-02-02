@@ -5,4 +5,3 @@ if c == 12:
 	print("answer is 13")
 else:
 	print("wrong answer")
-if
